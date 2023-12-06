@@ -9,7 +9,7 @@ pipeline {
     stage('Checkout') {
       steps {
         sh 'echo passed'
-        //git branch: 'main', url: 'https://github.com/uggerakeshvarma/chinna-Jenkins-Zero-To-Hero.git'
+        //git branch: 'main', url: 'https://github.com/uggerakeshvarma/chinna-jenkins-zero-to-hero.git'
       }
     }
     stage('Build and Test') {
@@ -21,7 +21,7 @@ pipeline {
     }
     stage('Static Code Analysis') {
       environment {
-        SONAR_URL = "http://13.233.33.193:9000"
+        SONAR_URL = "http://65.2.167.42:9000"
       }
       steps {
         withCredentials([string(credentialsId: 'chinna', variable: 'SONAR_AUTH_TOKEN')]) {
